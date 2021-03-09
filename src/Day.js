@@ -4,7 +4,8 @@ export default function Day() {
 
     function getDay() {
         const weekday = [
-            'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
+        ];
 
         const date = new Date();
         const curentYear = date.getFullYear();
