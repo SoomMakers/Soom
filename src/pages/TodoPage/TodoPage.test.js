@@ -20,8 +20,8 @@ describe('TodoPage', () => {
     useSelector.mockImplementation((selector) => selector({
       taskTitle: '밥먹기',
       tasks: [
-        { id: 1, title: 'Task-1', status: false },
-        { id: 2, title: 'Task-2', status: true },
+        { id: 1, title: 'Task-1', done: false },
+        { id: 2, title: 'Task-2', done: true },
       ],
     }))
   });
@@ -33,7 +33,7 @@ describe('TodoPage', () => {
       </MemoryRouter>
     );
 
-    expect(queryByPlaceholderText('할 일을 입력해 주세요')).toBeInTheDocument();
+    expect(queryByPlaceholderText('please write your task')).toBeInTheDocument();
   })
 });
 

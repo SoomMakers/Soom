@@ -1,4 +1,10 @@
-import { addTodo, deleteTodo, setTaskTitle } from './actions';
+import {
+  addTodo,
+  deleteTodo,
+  completeTodo,
+  setTaskTitle,
+} from './actions';
+
 import reducer from './reducer';
 
 describe('reducer', () => {
@@ -25,8 +31,8 @@ describe('reducer', () => {
   it('deleteTodo', () => {
     const initialState = {
       tasks: [
-        { id: 100, taskTitle: '밥먹기', status: false },
-        { id: 101, taskTitle: '눕기', status: true },
+        { id: 100, taskTitle: '밥먹기', done: false },
+        { id: 101, taskTitle: '눕기', done: true },
       ],
     };
 
@@ -34,4 +40,18 @@ describe('reducer', () => {
 
     expect(state.tasks).toHaveLength(1);
   });
+
+  it('completeTodo', () => {
+    const initialState = {
+      tasks: [
+        { id: 100, taskTitle: '밥먹기', done: false },
+        { id: 101, taskTitle: '눕기', done: true },
+      ],
+    };
+
+    const state = reducer(initialState, completeTodo(100));
+
+    expect(state.tasks[0].done).toBeTruthy();
+  });
+
 });

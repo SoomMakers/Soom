@@ -8,20 +8,22 @@ import List from './List';
 
 describe('List', () => {
   const handleClickDelete = jest.fn();
+  const handleClickComplete = jest.fn();
 
   function renderList(tasks) {
     return render((
       <List
         tasks={tasks}
         onClickDelete={handleClickDelete}
+        onClickComplete={handleClickComplete}
       />
     ));
   }
 
   context('with tasks', () => {
     const tasks = [
-      { id: 1, title: 'Task-1', status: false },
-      { id: 2, title: 'Task-2', status: true },
+      { id: 1, title: 'Task-1', done: false },
+      { id: 2, title: 'Task-2', done: true },
     ];
 
     it('renders tasks', () => {
@@ -31,16 +33,17 @@ describe('List', () => {
       expect(getByText(/Task-2/)).not.toBeNull();
     });
 
-    it('renders “완료” button to delete a task', () => {
+    it('renders “Delete” button to delete a task', () => {
       const { getAllByText } = renderList(tasks);
 
-      const buttons = getAllByText('Complete');
+      const buttons = getAllByText('Delete');
 
       fireEvent.click(buttons[0]);
 
       expect(handleClickDelete).toBeCalledWith(1);
     });
   });
+
 
   context('without tasks', () => {
     it('renders no task message', () => {
