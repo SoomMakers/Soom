@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function List({ tasks, onClickDelete }) {
+export default function List({ tasks, onClickDelete, onClickComplete }) {
   if (tasks.length === 0) {
     return (
       <p>Nothing To Do!</p>
@@ -11,9 +11,18 @@ export default function List({ tasks, onClickDelete }) {
     <ol>
       {tasks.map(({ id, title }) => (
         <li key={id}>
-          {title}
-          <button type="button" onClick={() => onClickDelete(id)}>
+          <button 
+            type="button"
+            onClick={() => onClickComplete(id)}
+          >
             Complete
+          </button>
+          {title}
+          <button 
+            type="button"
+            onClick={() => onClickDelete(id)}
+          >
+            Delete
           </button>
         </li>
       ))}

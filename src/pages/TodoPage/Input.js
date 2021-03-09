@@ -5,12 +5,12 @@ export default function Input({ value, onChange, onClick }) {
     <p>
       <input
         type="text"
-        placeholder="할 일을 입력해 주세요"
+        placeholder="please write your task"
         value={value}
         onChange={onChange}
       />
       <button type="button" onClick={onClick}>
-        추가
+        Add
       </button>
     </p>
   );

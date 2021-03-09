@@ -17,3 +17,10 @@ export function deleteTodo(id) {
     payload: { id }
   });
 }
+
+export function completeTodo(id) {
+  return ({
+    type: 'completeTodo',
+    payload: { id }
+  });
+}

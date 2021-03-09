@@ -18,13 +18,13 @@ test('Input', () => {
 
   expect(getByDisplayValue('기존 할 일')).not.toBeNull();
 
-  fireEvent.change(getByPlaceholderText('할 일을 입력해 주세요'), {
+  fireEvent.change(getByPlaceholderText('please write your task'), {
     target: { value: '무언가 하기' },
   });
 
   expect(handleChange).toBeCalled();
 
-  fireEvent.click(getByText('추가'));
+  fireEvent.click(getByText('Add'));
 
   expect(handleClick).toBeCalled();
 });
