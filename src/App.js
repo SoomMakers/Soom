@@ -1,11 +1,18 @@
 import React from 'react';
 
-function App() {
+import CommunityPage from './ComunityPage';
+
+import { Switch, Route } from 'react-router-dom';
+
+export default function App() {
   return (
-    <div>
-      <h1>Soom</h1>
-    </div>
+    <>
+      <h1>App</h1>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/community" component={CommunityPage} />
+      </Switch>
+    </>
   );
 }
 
-export default App;
