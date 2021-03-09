@@ -5,12 +5,31 @@ export const initialState = {
 };
 
 const reducers = {
-  // setRegions(state, { payload: { regions } }) {
-  //   return {
-  //     ...state,
-  //     regions,
-  //   };
-  // },
+  setTaskTitle(state, { payload: { taskTitle } }) {
+    return {
+      ...state,
+      taskTitle,
+    };
+  },
+
+  addTodo(state) {
+    if (state.taskTitle) {
+      return {
+        ...state,
+        id: state.id + 1,
+        taskTitle: '',
+        tasks: [...state.tasks, { id: state.id, title: state.taskTitle, status: false }],
+      }
+    }
+    return state;
+  },
+
+  deleteTodo(state, { payload: { id } }) {
+    return {
+      ...state,
+      tasks: [...state.tasks].filter((element) => id !== element.id)
+    }
+  }
 };
 
 function defaultReducer(state) {
