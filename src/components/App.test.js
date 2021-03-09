@@ -32,6 +32,7 @@ describe('App', () => {
       </MemoryRouter>
     );
 
-    expect(queryByText('App')).toBeInTheDocument();
+    expect(queryByText('Todo')).toBeInTheDocument();
+    expect(queryByText('Community')).toBeInTheDocument();
   });
 })
