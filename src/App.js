@@ -6,6 +6,8 @@ import { Switch, Route } from 'react-router-dom';
 
 import TodoPage from './TodoPage';
 
+import TodoFindPage from './TodoFindPage';
+
 export default function App() {
   return (
     <>
@@ -13,6 +15,7 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={TodoPage} />
         <Route exact path="/todo" component={TodoPage} />
+        <Route exact path="/todo/find" component={TodoFindPage} />
         <Route exact path="/community" component={CommunityPage} />
       </Switch>
     </>
