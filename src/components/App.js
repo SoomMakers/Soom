@@ -1,12 +1,13 @@
 import React from 'react';
 
-import CommunityPage from './CommunityPage';
+import CommunityPage from '../pages/CommunityPage/CommunityPage';
 
 import { Switch, Route } from 'react-router-dom';
 
-import TodoPage from './TodoPage';
-
-import TodoFindPage from './TodoFindPage';
+import {
+  TodoPage,
+  TodoFindPage,
+} from '../pages'
 
 export default function App() {
   return (

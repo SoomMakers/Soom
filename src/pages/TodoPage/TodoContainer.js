@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 
-import { setTaskTitle, addTodo, deleteTodo } from './actions';
+import { setTaskTitle, addTodo, deleteTodo } from '../../redux/actions';
 
 import Input from './Input';
 import List from './List';
