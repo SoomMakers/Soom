@@ -20,8 +20,8 @@ describe('List', () => {
 
   context('with tasks', () => {
     const tasks = [
-      { id: 1, title: 'Task-1' },
-      { id: 2, title: 'Task-2' },
+      { id: 1, title: 'Task-1', status: false },
+      { id: 2, title: 'Task-2', status: true },
     ];
 
     it('renders tasks', () => {
@@ -48,7 +48,7 @@ describe('List', () => {
 
       const { getByText } = renderList(tasks);
 
-      expect(getByText(/할 일이 없어요/)).not.toBeNull();
+      expect(getByText('Nothing To Do!')).not.toBeNull();
     });
   });
 });
