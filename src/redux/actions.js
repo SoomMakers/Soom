@@ -24,3 +24,10 @@ export function completeTodo(id) {
     payload: { id }
   });
 }
+
+export function addMission(mission) {
+  return ({
+    type: 'addMission',
+    payload: { mission }
+  })
+}

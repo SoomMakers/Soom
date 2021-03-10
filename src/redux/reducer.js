@@ -44,8 +44,22 @@ const reducers = {
         return task
       })]
     })
+  },
 
+  addMission: (state, { payload: { mission: { tasks} } }) => {
+    const newTasks = tasks.map((title, index) => ({
+      id: state.id + index,
+      title,
+      done: false,
+    }))
+
+    return ({
+      ...state,
+      id: state.id + 1,
+      tasks: [...state.tasks, ...newTasks]
+    })
   }
+
 }
 
 function defaultReducer(state) {
