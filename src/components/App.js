@@ -1,18 +1,26 @@
 import React from 'react';
 
-import CommunityPage from '../pages/CommunityPage/CommunityPage';
-
-import { Switch, Route } from 'react-router-dom';
+import {
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
 
 import {
   TodoPage,
   TodoFindPage,
+  CommunityPage
 } from '../pages'
 
 export default function App() {
   return (
     <>
-      <h1>App</h1>
+      <header>
+        <ul>
+          <li><Link to='/'>Todo</Link></li>
+          <li><Link to='/community'>Community</Link></li>
+        </ul>
+      </header>
       <Switch>
         <Route exact path="/" component={TodoPage} />
         <Route exact path="/todo" component={TodoPage} />
