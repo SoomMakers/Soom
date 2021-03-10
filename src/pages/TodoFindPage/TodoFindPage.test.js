@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import TodoFindPage from './TodoFindPage';
 
 describe('TodoFindPage', () => {
-    it('renders', () => {
-        const { queryByText } = render(<TodoFindPage />);
+    it('renders TodoFindPage', () => {
+        render(<TodoFindPage />);
 
-        expect(queryByText('🔍')).not.toBeNull();
+        expect(screen.queryByText('Find')).not.toBeNull();
     })
 });
