@@ -3,7 +3,9 @@ import {
   deleteTodo,
   completeTodo,
   setTaskTitle,
-  addMission
+  setPosts,
+  setContinent,
+  addMission,
 } from './actions';
 
 import reducer from './reducer';
@@ -15,6 +17,44 @@ describe('reducer', () => {
     const state = reducer(initialState, setTaskTitle('밥먹기'));
 
     expect(state.taskTitle).toBe('밥먹기');
+  });
+
+  it('setPosts', () => {
+    const initialState = { posts: [] };
+
+    const newPosts = [
+      {
+        user: {
+          id: 100,
+          name: 'kim',
+        },
+        post: {
+          todo: [
+            {
+              id: 1000,
+              taskTitle: 'Segregation',
+            },
+            {
+              id: 1001,
+              taskTitle: 'Recycle Plastics',
+            },
+          ],
+        },
+      },
+    ]
+
+    const state = reducer(initialState, setPosts(newPosts));
+    expect(state.posts).toHaveLength(1);
+    expect(state.posts[0].post.todo).toHaveLength(2);
+  });
+
+
+  it('setContinent', () => {
+    const initialState = { continent: 'asia' };
+
+    const state = reducer(initialState, setContinent('europe'));
+
+    expect(state.continent).toBe('europe');
   });
 
   it('addTodo', () => {

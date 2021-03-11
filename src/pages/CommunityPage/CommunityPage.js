@@ -1,11 +1,21 @@
 import React from 'react'
 
-function CommunityPage() {
+import { Link } from 'react-router-dom';
+
+import CommunityContainer from './CommunityContainer'
+
+export default function CommunityPage() {
+
+
   return (
     <div>
-      Community
+      <h1>
+        Community
+      </h1>
+      <Link to='/community/post'>
+        POST
+      </Link>
+      <CommunityContainer />
     </div>
   )
 }
-
-export default CommunityPage

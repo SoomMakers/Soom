@@ -15,6 +15,19 @@ const reducers = {
     };
   },
 
+  setPosts: (state, { payload: { posts } }) => {
+    return {
+      ...state,
+      posts,
+    };
+  },
+
+  setContinent: (state, { payload: { continent } }) => {
+    return {
+      ...state,
+      continent,
+    };
+  },
 
   addTodo: (state) => {
     if (state.taskTitle) {
