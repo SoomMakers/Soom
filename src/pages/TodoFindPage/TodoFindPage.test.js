@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -10,14 +10,14 @@ import TodoFindPage from './TodoFindPage';
 
 jest.mock('react-redux');
 
-const mockPush = jest.fn();
+const mockPush = jest.fn(); //path
 
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useHistory() {
-      return { push: mockPush };
+        return { push: mockPush };
     },
-  }));
+}));
 
 describe('TodoFindPage', () => {
     const dispatch = jest.fn();
@@ -76,31 +76,22 @@ describe('TodoFindPage', () => {
         expect(screen.getByLabelText('에어컨 필터 청소하기')).not.toBeNull();
         expect(screen.getByLabelText('비닐봉투 대신 장바구니 사용하기')).not.toBeNull();
     })
+    
+    describe('Add를 클릭 할 때', () => {
+        it('dispatch를 호출한다', async () => {
+            renderTodoFindPage();
 
-    // close를 누를 떄 todo 페이지로 이동 하는 테스트
-    // it('when clicking close button, occurs handle event', () => {
-    //     renderTodoFindPage();
+            fireEvent.click(screen.getByLabelText(/비닐봉투 대신 장바구니 사용하기/));
+            fireEvent.click(screen.getByLabelText(/에어컨 필터 청소하기/));
 
-    //     fireEvent.click(screen.getByRole('button', {
-    //         name: /Close/i
-    //     }));
+            await act(async () => {
+                fireEvent.submit(screen.getByRole('button', {
+                  name: /ADD/i,
+                }));
+              });
 
-    //     expect(mockPush).toBeCalledWith('/todo')
-        
-    // })
+            expect(dispatch).toBeCalled();
+        })
+    })
 
-    //Todo : submit시 dispatch가 1번 호출 되도록 하는 테스트 코드 작성
-    // it('when clicking add button, occurs dispatch', () => {
-        //     renderTodoFindPage();
-
-        // const buttonNode = screen.getByRole('button', {
-        //     name: /ADD/i
-        // })
-
-        // fireEvent.submit(screen.getByRole('button'));
-        
-
-        // expect(dispatch).toBeCalled();
-        // expect(mockPush).toBeCalledWith('/todo')
-    // })
 });
