@@ -26,7 +26,7 @@ describe('TodoContainer', () => {
     }))
   })
 
-  it('render TodoContainer', () => {
+  it('TodoContainer를 그려준다', () => {
     const { queryByText } = renderTodoContainer();
 
     expect(queryByText('Task-1')).toBeInTheDocument();
@@ -55,9 +55,5 @@ describe('TodoContainer', () => {
 
     expect(dispatch).toBeCalled();
   })
-
-
-
-
 });
 

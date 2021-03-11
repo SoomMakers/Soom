@@ -9,7 +9,8 @@ import {
 import {
   TodoPage,
   TodoFindPage,
-  CommunityPage
+  CommunityPage,
+  PostPage,
 } from '../pages'
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
         <Route exact path="/todo" component={TodoPage} />
         <Route exact path="/todo/find" component={TodoFindPage} />
         <Route exact path="/community" component={CommunityPage} />
+        <Route exact path="/community/post" component={PostPage} />
       </Switch>
     </>
   );

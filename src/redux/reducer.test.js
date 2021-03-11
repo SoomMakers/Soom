@@ -3,7 +3,9 @@ import {
   deleteTodo,
   completeTodo,
   setTaskTitle,
-  addMission
+  setPosts,
+  setContinent,
+  addMission,
 } from './actions';
 
 import reducer from './reducer';
@@ -15,6 +17,44 @@ describe('reducer', () => {
     const state = reducer(initialState, setTaskTitle('밥먹기'));
 
     expect(state.taskTitle).toBe('밥먹기');
+  });
+
+  it('setPosts', () => {
+    const initialState = { posts: [] };
+
+    const newPosts = [
+      {
+        user: {
+          id: 100,
+          name: 'kim',
+        },
+        post: {
+          todo: [
+            {
+              id: 1000,
+              taskTitle: 'Segregation',
+            },
+            {
+              id: 1001,
+              taskTitle: 'Recycle Plastics',
+            },
+          ],
+        },
+      },
+    ]
+
+    const state = reducer(initialState, setPosts(newPosts));
+    expect(state.posts).toHaveLength(1);
+    expect(state.posts[0].post.todo).toHaveLength(2);
+  });
+
+
+  it('setContinent', () => {
+    const initialState = { continent: 'asia' };
+
+    const state = reducer(initialState, setContinent('europe'));
+
+    expect(state.continent).toBe('europe');
   });
 
   it('addTodo', () => {
@@ -32,8 +72,16 @@ describe('reducer', () => {
   it('deleteTodo', () => {
     const initialState = {
       tasks: [
-        { id: 100, taskTitle: '밥먹기', done: false },
-        { id: 101, taskTitle: '눕기', done: true },
+        {
+          id: 100,
+          taskTitle: 'Don\'t use disposable bag.',
+          done: false,
+        },
+        {
+          id: 101,
+          taskTitle: 'Reuse mugcup',
+          done: true,
+        },
       ],
     };
 
@@ -45,8 +93,16 @@ describe('reducer', () => {
   it('completeTodo', () => {
     const initialState = {
       tasks: [
-        { id: 100, taskTitle: '밥먹기', done: false },
-        { id: 101, taskTitle: '눕기', done: true },
+        { 
+          id: 100, 
+          taskTitle: 'Don\'t use disposable bag.', 
+          done: false 
+        },
+        { 
+          id: 101, 
+          taskTitle: 'Reuse mugcup', 
+          done: true 
+        },
       ],
     };
 
@@ -60,8 +116,16 @@ describe('reducer', () => {
     const initialState = {
       id: 102,
       tasks: [
-        { id: 100, taskTitle: '밥먹기', done: false },
-        { id: 101, taskTitle: '눕기', done: true },
+        { 
+          id: 100, 
+          taskTitle: '밥먹기', 
+          done: false 
+        },
+        { 
+          id: 101, 
+          taskTitle: '눕기', 
+          done: true 
+        },
       ],
     };
     

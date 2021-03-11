@@ -20,20 +20,20 @@ describe('List', () => {
     ));
   }
 
-  context('with tasks', () => {
+  context('할일을 가지고 있으면', () => {
     const tasks = [
       { id: 1, title: 'Task-1', done: false },
       { id: 2, title: 'Task-2', done: true },
     ];
 
-    it('renders tasks', () => {
+    it('할 일을 화면에 보여준다.', () => {
       const { getByText } = renderList(tasks);
 
       expect(getByText(/Task-1/)).not.toBeNull();
       expect(getByText(/Task-2/)).not.toBeNull();
     });
 
-    it('renders “Delete” button to delete a task', () => {
+    it('삭제버튼을 누르면 handleClickDelete가 실행된다.', () => {
       const { getAllByText } = renderList(tasks);
 
       const buttons = getAllByText('Delete');

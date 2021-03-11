@@ -6,7 +6,7 @@ import Day from './Day';
 
 describe('Day', () => {
 
-    it('renders current date', () => {
+    it('현재 날짜를 고쳐준다', () => {
 
         const { queryByText } = render((<Day />));
 
