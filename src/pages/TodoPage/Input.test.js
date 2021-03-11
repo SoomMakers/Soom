@@ -10,16 +10,16 @@ test('Input', () => {
 
   const { getByDisplayValue, getByPlaceholderText, getByText } = render((
     <Input
-      value="기존 할 일"
+      value="none"
       onChange={handleChange}
       onClick={handleClick}
     />
   ));
 
-  expect(getByDisplayValue('기존 할 일')).not.toBeNull();
+  expect(getByDisplayValue('none')).not.toBeNull();
 
   fireEvent.change(getByPlaceholderText('please write your task'), {
-    target: { value: '무언가 하기' },
+    target: { value: 'recycle food waste' },
   });
 
   expect(handleChange).toBeCalled();

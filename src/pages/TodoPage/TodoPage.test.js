@@ -20,13 +20,21 @@ describe('TodoPage', () => {
     useSelector.mockImplementation((selector) => selector({
       taskTitle: '밥먹기',
       tasks: [
-        { id: 1, title: 'Task-1', done: false },
-        { id: 2, title: 'Task-2', done: true },
+        {
+          id: 1,
+          title: 'Task-1',
+          done: false,
+        },
+        {
+          id: 2,
+          title: 'Task-2',
+          done: true,
+        },
       ],
     }))
   });
 
-  it('render', () => {
+  it('TodoPage를 그려준다', () => {
     const { queryByPlaceholderText } = render(
       <MemoryRouter>
         <TodoPage />

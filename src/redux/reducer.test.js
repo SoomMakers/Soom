@@ -32,8 +32,16 @@ describe('reducer', () => {
   it('deleteTodo', () => {
     const initialState = {
       tasks: [
-        { id: 100, taskTitle: '밥먹기', done: false },
-        { id: 101, taskTitle: '눕기', done: true },
+        {
+          id: 100,
+          taskTitle: 'Don\'t use disposable bag.',
+          done: false,
+        },
+        {
+          id: 101,
+          taskTitle: 'Reuse mugcup',
+          done: true,
+        },
       ],
     };
 
@@ -45,8 +53,16 @@ describe('reducer', () => {
   it('completeTodo', () => {
     const initialState = {
       tasks: [
-        { id: 100, taskTitle: '밥먹기', done: false },
-        { id: 101, taskTitle: '눕기', done: true },
+        { 
+          id: 100, 
+          taskTitle: 'Don\'t use disposable bag.', 
+          done: false 
+        },
+        { 
+          id: 101, 
+          taskTitle: 'Reuse mugcup', 
+          done: true 
+        },
       ],
     };
 
@@ -60,8 +76,16 @@ describe('reducer', () => {
     const initialState = {
       id: 102,
       tasks: [
-        { id: 100, taskTitle: '밥먹기', done: false },
-        { id: 101, taskTitle: '눕기', done: true },
+        { 
+          id: 100, 
+          taskTitle: '밥먹기', 
+          done: false 
+        },
+        { 
+          id: 101, 
+          taskTitle: '눕기', 
+          done: true 
+        },
       ],
     };
     
