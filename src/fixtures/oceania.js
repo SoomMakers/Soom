@@ -20,7 +20,7 @@ const oceania = {
       },
       {
         user: {
-          id: 100,
+          id: 101,
           name: 'chris Hemsworth',
         },
         post: {
@@ -38,7 +38,7 @@ const oceania = {
       },
       {
         user: {
-          id: 100,
+          id: 102,
           name: 'keith urban',
         },
         post: {
@@ -56,7 +56,7 @@ const oceania = {
       },
       {
         user: {
-          id: 100,
+          id: 103,
           name: 'kylie',
         },
         post: {
@@ -74,7 +74,7 @@ const oceania = {
       },
       {
         user: {
-          id: 100,
+          id: 104,
           name: 'cate blanchett',
         },
         post: {
@@ -92,7 +92,7 @@ const oceania = {
       },
       {
         user: {
-          id: 100,
+          id: 105,
           name: 'Mel Gibson',
         },
         post: {

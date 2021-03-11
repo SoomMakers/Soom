@@ -21,7 +21,7 @@ const asia = {
       },
       {
         user: {
-          id: 100,
+          id: 101,
           name: 'park',
         },
         post: {
@@ -39,7 +39,7 @@ const asia = {
       },
       {
         user: {
-          id: 100,
+          id: 102,
           name: 'shin',
         },
         post: {
@@ -57,7 +57,7 @@ const asia = {
       },
       {
         user: {
-          id: 100,
+          id: 103,
           name: 'choi',
         },
         post: {
@@ -75,26 +75,8 @@ const asia = {
       },
       {
         user: {
-          id: 100,
+          id: 104,
           name: 'han',
-        },
-        post: {
-          todo: [
-            {
-              id: 1000,
-              taskTitle: 'Segregation',
-            },
-            {
-              id: 1001,
-              taskTitle: 'Recycle Plastics',
-            },
-          ],
-        },
-      },
-      {
-        user: {
-          id: 100,
-          name: 'kim',
         },
         post: {
           todo: [

@@ -2,7 +2,7 @@ const europe = {
   posts: [
     {
       user: {
-        id: 100,
+        id: 101,
         name: 'harry',
       },
       post: {
@@ -20,7 +20,7 @@ const europe = {
     },
     {
       user: {
-        id: 100,
+        id: 102,
         name: 'ali',
       },
       post: {
@@ -38,7 +38,7 @@ const europe = {
     },
     {
       user: {
-        id: 100,
+        id: 103,
         name: 'winks',
       },
       post: {
@@ -56,7 +56,7 @@ const europe = {
     },
     {
       user: {
-        id: 100,
+        id: 104,
         name: 'toby',
       },
       post: {
@@ -74,26 +74,8 @@ const europe = {
     },
     {
       user: {
-        id: 100,
+        id: 105,
         name: 'steve',
-      },
-      post: {
-        todo: [
-          {
-            id: 1000,
-            taskTitle: 'Segregation',
-          },
-          {
-            id: 1001,
-            taskTitle: 'Recycle Plastics',
-          },
-        ],
-      },
-    },
-    {
-      user: {
-        id: 100,
-        name: 'rooney',
       },
       post: {
         todo: [
