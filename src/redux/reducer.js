@@ -3,6 +3,8 @@ export const initialState = {
   taskTitle: '',
   tasks: [],
   done: false,
+  continent: 'asia',
+  posts: [],
 };
 
 const reducers = {
