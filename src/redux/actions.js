@@ -9,20 +9,20 @@ export function setTaskTitle(taskTitle) {
   );
 }
 
-export function setPosts(posts){
+export function setPosts(posts) {
   return (
     {
-      type:'setPosts',
-      payload:{ posts },
+      type: 'setPosts',
+      payload: { posts },
     }
   );
 }
 
-export function setContinent(continent){
+export function setContinent(continent) {
   return (
     {
-      type:'setContinent',
-      payload:{ continent },
+      type: 'setContinent',
+      payload: { continent },
     }
   );
 }
@@ -52,12 +52,23 @@ export function addMission(mission) {
   })
 }
 
-export function loadPosts( continent ){
+export function loadPosts(continent) {
   return async (dispatch) => {
     dispatch(setContinent(continent))
-    
+
     const posts = await fetchPost({ continent });
 
     dispatch(setPosts(posts));
   }
+}
+
+export function showDoneTasks() {
+  return ({ type: 'showDoneTasks' });
+}
+
+export function addPost({ post }) {
+  return ({
+    type: 'addPost',
+    payload: { post }
+  })
 }
