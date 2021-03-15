@@ -1,10 +1,16 @@
 export const initialState = {
   id: 100,
+  user: {
+    id: 1818,
+    name: 'SangHoon',
+    continent: 'asia',
+  },
   taskTitle: '',
   tasks: [],
   done: false,
   continent: 'asia',
   posts: [],
+  donetasks: []
 };
 
 const reducers = {
@@ -61,7 +67,7 @@ const reducers = {
     })
   },
 
-  addMission: (state, { payload: { mission: { tasks} } }) => {
+  addMission: (state, { payload: { mission: { tasks } } }) => {
     const newTasks = tasks.map((title, index) => ({
       id: state.id + index,
       title,
@@ -73,8 +79,21 @@ const reducers = {
       id: state.id + 1,
       tasks: [...state.tasks, ...newTasks]
     })
-  }
+  },
 
+  showDoneTasks: (state) => {
+    return ({
+      ...state,
+      doneTasks: state.tasks.filter((task) => task.done === true),
+    })
+  },
+
+  addPost: (state, { payload: { post } }) => {
+    return ({
+      ...state,
+      posts: [...state.posts, post]
+    })
+  }
 }
 
 function defaultReducer(state) {
