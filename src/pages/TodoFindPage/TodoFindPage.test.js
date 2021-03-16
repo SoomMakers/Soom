@@ -1,25 +1,27 @@
-import React from "react";
+import React from 'react';
 
-import { act, fireEvent, render, screen } from "@testing-library/react";
+import {
+  act, fireEvent, render, screen,
+} from '@testing-library/react';
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 
-import { MemoryRouter } from "react-router-dom";
+import { MemoryRouter } from 'react-router-dom';
 
-import TodoFindPage from "./TodoFindPage";
+import TodoFindPage from './TodoFindPage';
 
-jest.mock("react-redux");
+jest.mock('react-redux');
 
 const mockPush = jest.fn(); // path
 
-jest.mock("react-router-dom", () => ({
+jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useHistory() {
     return { push: mockPush };
   },
 }));
 
-describe("TodoFindPage", () => {
+describe('TodoFindPage', () => {
   const dispatch = jest.fn();
 
   const missions = [
@@ -43,7 +45,7 @@ describe("TodoFindPage", () => {
       id: 5,
       title: '비닐봉투 대신 장바구니 사용하기',
     },
-  ]
+  ];
 
   function renderTodoFindPage() {
     return render((
@@ -60,8 +62,9 @@ describe("TodoFindPage", () => {
 
     useSelector.mockImplementation((selector) => selector({
       missions,
-    }))
-  );
+    }));
+  });
+
   it('renders TodoFindPage', () => {
     renderTodoFindPage();
 
@@ -74,7 +77,7 @@ describe("TodoFindPage", () => {
     expect(screen.getByLabelText('친환경 상품 구매하기')).not.toBeNull();
     expect(screen.getByLabelText('에어컨 필터 청소하기')).not.toBeNull();
     expect(screen.getByLabelText('비닐봉투 대신 장바구니 사용하기')).not.toBeNull();
-  })
+  });
 
   describe('Add를 클릭 할 때', () => {
     it('dispatch를 호출한다', async () => {
@@ -85,12 +88,11 @@ describe("TodoFindPage", () => {
 
       await act(async () => {
         fireEvent.submit(screen.getByRole('button', {
-            name: /ADD/i,
+          name: /ADD/i,
         }));
       });
 
       expect(dispatch).toBeCalled();
-    })
-  })
-
+    });
+  });
 });
