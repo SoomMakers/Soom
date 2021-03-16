@@ -1,23 +1,23 @@
-import React from "react";
+import React from 'react';
 
-import { render, screen } from "@testing-library/react";
+import { render, screen } from '@testing-library/react';
 
-import { MemoryRouter } from "react-router";
+import { MemoryRouter } from 'react-router';
 
-import {  useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 
-import CommunityPage from "./CommunityPage";
+import CommunityPage from './CommunityPage';
 
-jest.mock("react-redux");
+jest.mock('react-redux');
 
-describe("CommunityPage", () => {
+describe('CommunityPage', () => {
   const dispatch = jest.fn();
 
   const renderCommunityPage = () => render((
-      <MemoryRouter>
-        <CommunityPage />
-      </MemoryRouter>
-  );
+    <MemoryRouter>
+      <CommunityPage />
+    </MemoryRouter>
+  ));
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -27,27 +27,26 @@ describe("CommunityPage", () => {
       continent: 'asia',
       posts: [
         {
-            user: {
-              id: 100,
+          user: {
+            id: 100,
             name: 'kim',
-            },
+          },
           post: {
-              todo: [
-                {
-                  id: 1000,
-                taskTitle: 'Segregation',
-                },
+            todo: [
               {
-                  id: 1001,
+                id: 1000,
+                taskTitle: 'Segregation',
+              },
+              {
+                id: 1001,
                 taskTitle: 'Recycle Plastics',
-                },
-              ],
+              },
+            ],
           },
-          },
+        },
       ],
-    }))
-  );
-
+    }));
+  });
 
   it('CommunityPage를 그려준다', () => {
     renderCommunityPage();
@@ -56,6 +55,5 @@ describe("CommunityPage", () => {
 
     expect(screen.getByText(/POST/i)).toBeInTheDocument();
     expect(screen.getByText(/asia/i)).toBeInTheDocument();
-  })
-
+  });
 });
