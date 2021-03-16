@@ -8,13 +8,9 @@ test('Input', () => {
   const handleChange = jest.fn();
   const handleClick = jest.fn();
 
-  const { getByDisplayValue, getByPlaceholderText, getByText } = render((
-    <Input
-      value="none"
-      onChange={handleChange}
-      onClick={handleClick}
-    />
-  ));
+  const { getByDisplayValue, getByPlaceholderText, getByText } = render(
+    <Input value="none" onChange={handleChange} onClick={handleClick} />,
+  );
 
   expect(getByDisplayValue('none')).not.toBeNull();
 

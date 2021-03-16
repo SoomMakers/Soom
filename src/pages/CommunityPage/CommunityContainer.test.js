@@ -15,11 +15,11 @@ jest.mock('react-redux');
 describe('CommunityContainer', () => {
   const dispatch = jest.fn();
 
-  const renderCommunityContainer = () => render((
+  const renderCommunityContainer = () => render(
     <MemoryRouter>
       <CommunityContainer />
-    </MemoryRouter>
-  ));
+    </MemoryRouter>,
+  );
 
   beforeEach(() => {
     jest.clearAllMocks();

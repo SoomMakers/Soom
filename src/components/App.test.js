@@ -11,7 +11,6 @@ import App from './App';
 jest.mock('react-redux');
 
 describe('App', () => {
-
   const dispatch = jest.fn();
   beforeEach(() => {
     dispatch.mockClear();
@@ -23,16 +22,17 @@ describe('App', () => {
         { id: 1, title: 'Task-1', status: false },
         { id: 2, title: 'Task-2', status: true },
       ],
-    }))
-  })
-  it('render', () => {
+    }));
+  });
+
+  it('renders App', () => {
     const { queryByText } = render(
       <MemoryRouter>
         <App />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     expect(queryByText('Todo')).toBeInTheDocument();
     expect(queryByText('Community')).toBeInTheDocument();
   });
-})
+});

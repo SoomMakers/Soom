@@ -1,74 +1,68 @@
-import { fetchPost } from '../services/api'
+import fetchPost from '../services/api';
 
 export function setTaskTitle(taskTitle) {
-  return (
-    {
-      type: 'setTaskTitle',
-      payload: { taskTitle }
-    }
-  );
+  return {
+    type: 'setTaskTitle',
+    payload: { taskTitle },
+  };
 }
 
 export function setPosts(posts) {
-  return (
-    {
-      type: 'setPosts',
-      payload: { posts },
-    }
-  );
+  return {
+    type: 'setPosts',
+    payload: { posts },
+  };
 }
 
 export function setContinent(continent) {
-  return (
-    {
-      type: 'setContinent',
-      payload: { continent },
-    }
-  );
+  return {
+    type: 'setContinent',
+    payload: { continent },
+  };
 }
 
 export function addTodo() {
-  return ({ type: 'addTodo' });
+  return { type: 'addTodo' };
 }
 
 export function deleteTodo(id) {
-  return ({
+  return {
     type: 'deleteTodo',
-    payload: { id }
-  });
+    payload: { id },
+  };
 }
 
 export function completeTodo(id) {
-  return ({
+  return {
     type: 'completeTodo',
-    payload: { id }
-  });
+    payload: { id },
+  };
 }
 
 export function addMission(mission) {
-  return ({
+  return {
     type: 'addMission',
-    payload: { mission }
-  })
+    payload: { mission },
+  };
+}
+
+export function showDoneTasks() {
+  return { type: 'showDoneTasks' };
+}
+
+export function addPost({ post }) {
+  return {
+    type: 'addPost',
+    payload: { post },
+  };
 }
 
 export function loadPosts(continent) {
   return async (dispatch) => {
-    dispatch(setContinent(continent))
+    dispatch(setContinent(continent));
 
     const posts = await fetchPost({ continent });
 
     dispatch(setPosts(posts));
-  }
-}
-
-export function showDoneTasks() {
-  return ({ type: 'showDoneTasks' });
-}
-
-export function addPost({ post }) {
-  return ({
-    type: 'addPost',
-    payload: { post }
-  })
+  };
 }

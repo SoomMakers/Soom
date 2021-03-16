@@ -3,17 +3,17 @@ const europe = {
     {
       user: {
         id: 101,
-        name: 'harry',
+        name: "harry",
       },
       post: {
         todo: [
           {
             id: 1000,
-            taskTitle: 'Segregation',
+            taskTitle: "Segregation",
           },
           {
             id: 1001,
-            taskTitle: 'Recycle Plastics',
+            taskTitle: "Recycle Plastics",
           },
         ],
       },
@@ -21,17 +21,17 @@ const europe = {
     {
       user: {
         id: 102,
-        name: 'ali',
+        name: "ali",
       },
       post: {
         todo: [
           {
             id: 1000,
-            taskTitle: 'Segregation',
+            taskTitle: "Segregation",
           },
           {
             id: 1001,
-            taskTitle: 'Recycle Plastics',
+            taskTitle: "Recycle Plastics",
           },
         ],
       },
@@ -39,17 +39,17 @@ const europe = {
     {
       user: {
         id: 103,
-        name: 'winks',
+        name: "winks",
       },
       post: {
         todo: [
           {
             id: 1000,
-            taskTitle: 'Segregation',
+            taskTitle: "Segregation",
           },
           {
             id: 1001,
-            taskTitle: 'Recycle Plastics',
+            taskTitle: "Recycle Plastics",
           },
         ],
       },
@@ -57,17 +57,17 @@ const europe = {
     {
       user: {
         id: 104,
-        name: 'toby',
+        name: "toby",
       },
       post: {
         todo: [
           {
             id: 1000,
-            taskTitle: 'Segregation',
+            taskTitle: "Segregation",
           },
           {
             id: 1001,
-            taskTitle: 'Recycle Plastics',
+            taskTitle: "Recycle Plastics",
           },
         ],
       },
@@ -75,17 +75,17 @@ const europe = {
     {
       user: {
         id: 105,
-        name: 'steve',
+        name: "steve",
       },
       post: {
         todo: [
           {
             id: 1000,
-            taskTitle: 'Segregation',
+            taskTitle: "Segregation",
           },
           {
             id: 1001,
-            taskTitle: 'Recycle Plastics',
+            taskTitle: "Recycle Plastics",
           },
         ],
       },

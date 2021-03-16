@@ -31,17 +31,18 @@ describe('TodoPage', () => {
           done: true,
         },
       ],
-    }))
+    }));
   });
 
   it('TodoPage를 그려준다', () => {
     const { queryByPlaceholderText } = render(
       <MemoryRouter>
         <TodoPage />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
-    expect(queryByPlaceholderText('please write your task')).toBeInTheDocument();
-  })
+    expect(
+      queryByPlaceholderText('please write your task'),
+    ).toBeInTheDocument();
+  });
 });
-
