@@ -1,25 +1,22 @@
 import React from 'react';
 
-import {
-  Switch,
-  Route,
-  Link
-} from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 
 import {
-  TodoPage,
-  TodoFindPage,
-  CommunityPage,
-  PostPage,
-} from '../pages'
+  TodoPage, TodoFindPage, CommunityPage, PostPage,
+} from '../pages';
 
 export default function App() {
   return (
     <>
       <header>
         <ul>
-          <li><Link to='/'>Todo</Link></li>
-          <li><Link to='/community'>Community</Link></li>
+          <li>
+            <Link to="/">Todo</Link>
+          </li>
+          <li>
+            <Link to="/community">Community</Link>
+          </li>
         </ul>
       </header>
       <Switch>
@@ -32,4 +29,3 @@ export default function App() {
     </>
   );
 }
-

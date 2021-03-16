@@ -3,17 +3,17 @@ const oceania = {
     {
       user: {
         id: 100,
-        name: 'hugh jackman',
+        name: "hugh jackman",
       },
       post: {
         todo: [
           {
             id: 1000,
-            taskTitle: 'Segregation',
+            taskTitle: "Segregation",
           },
           {
             id: 1001,
-            taskTitle: 'Recycle Plastics',
+            taskTitle: "Recycle Plastics",
           },
         ],
       },
@@ -21,17 +21,17 @@ const oceania = {
     {
       user: {
         id: 101,
-        name: 'chris Hemsworth',
+        name: "chris Hemsworth",
       },
       post: {
         todo: [
           {
             id: 1000,
-            taskTitle: 'Segregation',
+            taskTitle: "Segregation",
           },
           {
             id: 1001,
-            taskTitle: 'Recycle Plastics',
+            taskTitle: "Recycle Plastics",
           },
         ],
       },
@@ -39,17 +39,17 @@ const oceania = {
     {
       user: {
         id: 102,
-        name: 'keith urban',
+        name: "keith urban",
       },
       post: {
         todo: [
           {
             id: 1000,
-            taskTitle: 'Segregation',
+            taskTitle: "Segregation",
           },
           {
             id: 1001,
-            taskTitle: 'Recycle Plastics',
+            taskTitle: "Recycle Plastics",
           },
         ],
       },
@@ -57,17 +57,17 @@ const oceania = {
     {
       user: {
         id: 103,
-        name: 'kylie',
+        name: "kylie",
       },
       post: {
         todo: [
           {
             id: 1000,
-            taskTitle: 'Segregation',
+            taskTitle: "Segregation",
           },
           {
             id: 1001,
-            taskTitle: 'Recycle Plastics',
+            taskTitle: "Recycle Plastics",
           },
         ],
       },
@@ -75,17 +75,17 @@ const oceania = {
     {
       user: {
         id: 104,
-        name: 'cate blanchett',
+        name: "cate blanchett",
       },
       post: {
         todo: [
           {
             id: 1000,
-            taskTitle: 'Segregation',
+            taskTitle: "Segregation",
           },
           {
             id: 1001,
-            taskTitle: 'Recycle Plastics',
+            taskTitle: "Recycle Plastics",
           },
         ],
       },
@@ -93,17 +93,17 @@ const oceania = {
     {
       user: {
         id: 105,
-        name: 'Mel Gibson',
+        name: "Mel Gibson",
       },
       post: {
         todo: [
           {
             id: 1000,
-            taskTitle: 'Segregation',
+            taskTitle: "Segregation",
           },
           {
             id: 1001,
-            taskTitle: 'Recycle Plastics',
+            taskTitle: "Recycle Plastics",
           },
         ],
       },

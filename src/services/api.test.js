@@ -1,5 +1,3 @@
 describe('api', () => {
-    it('api test', () => {
-        
-    })
-})
+  it('api test', () => {});
+});

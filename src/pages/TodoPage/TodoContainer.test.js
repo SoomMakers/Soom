@@ -9,10 +9,9 @@ import TodoContainer from './TodoContainer';
 jest.mock('react-redux');
 
 describe('TodoContainer', () => {
-
   const dispatch = jest.fn();
 
-  const renderTodoContainer = () => render(<TodoContainer />)
+  const renderTodoContainer = () => render(<TodoContainer />);
 
   beforeEach(() => {
     dispatch.mockClear();
@@ -20,17 +19,15 @@ describe('TodoContainer', () => {
     useDispatch.mockImplementation(() => dispatch);
     useSelector.mockImplementation((selector) => selector({
       taskTitle: '밥먹기',
-      tasks: [
-        { id: 1, title: 'Task-1', done: false },
-      ],
-    }))
-  })
+      tasks: [{ id: 1, title: 'Task-1', done: false }],
+    }));
+  });
 
   it('TodoContainer를 그려준다', () => {
     const { queryByText } = renderTodoContainer();
 
     expect(queryByText('Task-1')).toBeInTheDocument();
-  })
+  });
 
   it('addTodo dispatch 해준다', () => {
     const { queryByText } = renderTodoContainer();
@@ -38,7 +35,7 @@ describe('TodoContainer', () => {
     fireEvent.click(queryByText('Add'));
 
     expect(dispatch).toBeCalled();
-  })
+  });
 
   it('handleClickComplete를 dispatch 해준다', () => {
     const { queryByText } = renderTodoContainer();
@@ -46,7 +43,7 @@ describe('TodoContainer', () => {
     fireEvent.click(queryByText('Complete'));
 
     expect(dispatch).toBeCalled();
-  })
+  });
 
   it('handleClickDelete를 dispatch 해준다', () => {
     const { queryByText } = renderTodoContainer();
@@ -54,6 +51,5 @@ describe('TodoContainer', () => {
     fireEvent.click(queryByText('Delete'));
 
     expect(dispatch).toBeCalled();
-  })
+  });
 });
-

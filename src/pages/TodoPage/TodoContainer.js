@@ -13,7 +13,7 @@ import Input from './Input';
 import List from './List';
 import Day from './Day';
 
-import { get } from '../../utils/utils'
+import { get } from '../../utils/utils';
 
 export default function TodoContainer() {
   const dispatch = useDispatch();
@@ -40,11 +40,7 @@ export default function TodoContainer() {
   return (
     <div>
       <Day />
-      <Input
-        value={taskTitle}
-        onChange={handleChange}
-        onClick={handleClick}
-      />
+      <Input value={taskTitle} onChange={handleChange} onClick={handleClick} />
       <List
         tasks={tasks}
         onClickDelete={handleClickDelete}

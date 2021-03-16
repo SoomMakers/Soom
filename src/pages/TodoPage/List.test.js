@@ -2,7 +2,7 @@ import React from 'react';
 
 import { render, fireEvent } from '@testing-library/react';
 
-import context from 'jest-plugin-context'
+import context from 'jest-plugin-context';
 
 import List from './List';
 
@@ -11,13 +11,13 @@ describe('List', () => {
   const handleClickComplete = jest.fn();
 
   function renderList(tasks) {
-    return render((
+    return render(
       <List
         tasks={tasks}
         onClickDelete={handleClickDelete}
         onClickComplete={handleClickComplete}
-      />
-    ));
+      />,
+    );
   }
 
   context('할일을 가지고 있으면', () => {
@@ -43,7 +43,6 @@ describe('List', () => {
       expect(handleClickDelete).toBeCalledWith(1);
     });
   });
-
 
   context('without tasks', () => {
     it('renders no task message', () => {
