@@ -1,4 +1,7 @@
-import fetchPost from '../services/api';
+import {
+  fetchPost,
+  fetchMission,
+} from '../services/api';
 
 export function setTaskTitle(taskTitle) {
   return {
@@ -11,6 +14,13 @@ export function setPosts(posts) {
   return {
     type: 'setPosts',
     payload: { posts },
+  };
+}
+
+export function setMissions(missions) {
+  return {
+    type: 'setMissions',
+    payload: { missions },
   };
 }
 
@@ -64,5 +74,12 @@ export function loadPosts(continent) {
     const posts = await fetchPost({ continent });
 
     dispatch(setPosts(posts));
+  };
+}
+
+export function loadMissions() {
+  return async (dispatch) => {
+    const missions = await fetchMission();
+    dispatch(setMissions(missions));
   };
 }

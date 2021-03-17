@@ -5,12 +5,15 @@ import {
   setTaskTitle,
   setPosts,
   setContinent,
+  setMissions,
   addMission,
   showDoneTasks,
   addPost,
 } from './actions';
 
 import reducer from './reducer';
+
+import missions from '../fixtures/missions';
 
 describe('reducer', () => {
   it('setTasktitle', () => {
@@ -48,6 +51,14 @@ describe('reducer', () => {
     const state = reducer(initialState, setPosts(newPosts));
     expect(state.posts).toHaveLength(1);
     expect(state.posts[0].post.todo).toHaveLength(2);
+  });
+
+  it('setMissions', () => {
+    const initialState = { missions: [] };
+
+    const state = reducer(initialState, setMissions(missions));
+
+    expect(state.missions).toHaveLength(5);
   });
 
   it('setContinent', () => {
