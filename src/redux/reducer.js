@@ -1,5 +1,7 @@
 import asia from '../fixtures/asia';
 
+import { filterMissions } from '../utils/utils';
+
 export const initialState = {
   id: 100,
   user: {
@@ -7,6 +9,7 @@ export const initialState = {
     name: 'SangHoon',
     continent: 'asia',
   },
+  missions: [],
   taskTitle: '',
   tasks: [],
   done: false,
@@ -19,6 +22,11 @@ const reducers = {
   setTaskTitle: (state, { payload: { taskTitle } }) => ({
     ...state,
     taskTitle,
+  }),
+
+  setMissions: (state, { payload: { missions } }) => ({
+    ...state,
+    missions: filterMissions(missions),
   }),
 
   setPosts: (state, { payload: { posts } }) => ({
