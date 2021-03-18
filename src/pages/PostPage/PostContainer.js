@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { useHistory } from 'react-router';
 
-import { showDoneTasks, addPost } from '../../redux/actions';
+import { showDoneTasks, savePost } from '../../redux/actions';
 
 import { get } from '../../utils/utils';
 
@@ -19,13 +19,21 @@ export default function PostContainer() {
 
   const { handleSubmit, register } = useForm();
 
+  /**
+   * 1. next 버튼으로 교체해서 Description Page로 이동하여라 App 라우팅설정
+   * 2. next를 클릭 시에, 현재 form data를 store에 우선 저장을 실시한다.
+   * 3. reducer에서 setPost -> 수정을 해야된다 선 데이터 저장.
+   *
+   *
+   */
+
   function handleClickClose() {
     history.push('/community');
   }
 
   const onSubmit = (data) => {
     dispatch(
-      addPost({
+      savePost({
         post: {
           user,
           post: data,
@@ -33,7 +41,7 @@ export default function PostContainer() {
       }),
     );
 
-    history.push('/community');
+    history.push('/community/post/description');
   };
 
   useEffect(() => {
@@ -65,7 +73,9 @@ export default function PostContainer() {
           </div>
         ))}
 
-        <input type="submit" value="Add" />
+        <button type="submit">
+          NEXT
+        </button>
       </form>
     </div>
   );

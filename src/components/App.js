@@ -3,7 +3,11 @@ import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 
 import {
-  TodoPage, TodoFindPage, CommunityPage, PostPage,
+  TodoPage,
+  TodoFindPage,
+  CommunityPage,
+  PostPage,
+  PostDescriptionPage,
 } from '../pages';
 
 export default function App() {
@@ -25,6 +29,7 @@ export default function App() {
         <Route exact path="/todo/find" component={TodoFindPage} />
         <Route exact path="/community" component={CommunityPage} />
         <Route exact path="/community/post" component={PostPage} />
+        <Route exact path="/community/post/description" component={PostDescriptionPage} />
       </Switch>
     </>
   );

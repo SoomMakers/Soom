@@ -52,7 +52,7 @@ describe('PostContainer', () => {
     expect(screen.getByText('No Complete Tasks')).toBeInTheDocument();
   });
 
-  it('Add 버튼을 누르면, dispatch가 호출된다.', async () => {
+  it('NEXT 버튼을 누르면, dispatch가 호출된다.', async () => {
     given('doneTasks', () => doneTasks);
 
     renderPost();
@@ -63,7 +63,7 @@ describe('PostContainer', () => {
     await act(async () => {
       fireEvent.submit(
         screen.getByRole('button', {
-          name: /ADD/i,
+          name: 'NEXT',
         }),
       );
     });

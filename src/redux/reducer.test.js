@@ -9,6 +9,7 @@ import {
   addMission,
   showDoneTasks,
   addPost,
+  savePost,
 } from './actions';
 
 import reducer from './reducer';
@@ -178,6 +179,38 @@ describe('reducer', () => {
     expect(state.doneTasks.length).toBe(2);
   });
 
+  describe('savePost', () => {
+    const initialState = {
+      temporaryPost: {},
+    };
+
+    it('선택한 완료된 일들을, 임시로 저장한다', () => {
+      const state = reducer(initialState, savePost({
+        post: {
+          user: {
+            id: 100,
+            name: 'kim',
+          },
+          post: {
+            todo: [
+              {
+                id: 1000,
+                taskTitle: 'Segregation',
+              },
+              {
+                id: 1001,
+                taskTitle: 'Recycle Plastics',
+              },
+            ],
+          },
+        },
+      }));
+
+      expect(state.temporaryPost.post.user.name).toBe('kim');
+      expect(state.temporaryPost.post.post.todo).toHaveLength(2);
+    });
+  });
+
   describe('addPost', () => {
     const initialState = {
       posts: [
@@ -200,34 +233,36 @@ describe('reducer', () => {
           },
         },
       ],
+      temporaryPost: {
+        post: {
+          user: {
+            id: 100,
+            name: 'shin',
+          },
+          post: {
+            todo: [
+              {
+                id: 1000,
+                taskTitle: 'use Tubmlr',
+              },
+              {
+                id: 1001,
+                taskTitle: 'eat less meat',
+              },
+            ],
+          },
+        },
+      },
     };
 
     it('유저가 제출 한 포스트를 해당 유저 지역에 업로드한다.', () => {
       const state = reducer(
         initialState,
-        addPost({
-          post: {
-            user: {
-              id: 100,
-              name: 'kim',
-            },
-            post: {
-              todo: [
-                {
-                  id: 1000,
-                  taskTitle: 'Segregation',
-                },
-                {
-                  id: 1001,
-                  taskTitle: 'Recycle Plastics',
-                },
-              ],
-            },
-          },
-        }),
+        addPost({ description: 'WHAT A BEAUTIFUL DAY' }),
       );
 
       expect(state.posts).toHaveLength(2);
+      expect(state.posts[1].description).toBe('WHAT A BEAUTIFUL DAY');
     });
   });
 });
