@@ -14,6 +14,7 @@ export const initialState = {
   tasks: [],
   done: false,
   continent: 'asia',
+  temporaryPost: {},
   posts: asia.posts,
   donetasks: [],
 };
@@ -38,6 +39,18 @@ const reducers = {
     ...state,
     continent,
   }),
+
+  savePost: (state, { payload: { temporaryPost } }) => {
+    temporaryPost.post.post.todo = temporaryPost.post.post.todo.map((taskTitle, index) => ({
+      id: state.id + index,
+      taskTitle,
+    }));
+
+    return ({
+      ...state,
+      temporaryPost,
+    });
+  },
 
   addTodo: (state) => {
     if (state.taskTitle) {
@@ -100,17 +113,13 @@ const reducers = {
     doneTasks: state.tasks.filter((task) => task.done === true),
   }),
 
-  addPost: (state, { payload: { post } }) => {
-    post.post.todo = post.post.todo.map((taskTitle, index) => ({
-      id: state.id + index,
-      taskTitle,
-    }));
-
-    return ({
-      ...state,
-      posts: [...state.posts, post],
-    });
-  },
+  addPost: (state, { payload: { description } }) => ({
+    ...state,
+    posts: [...state.posts, {
+      ...state.temporaryPost,
+      description: description.description,
+    }],
+  }),
 };
 
 function defaultReducer(state) {

@@ -60,10 +60,17 @@ export function showDoneTasks() {
   return { type: 'showDoneTasks' };
 }
 
-export function addPost({ post }) {
+export function addPost(description) {
   return {
     type: 'addPost',
-    payload: { post },
+    payload: { description },
+  };
+}
+
+export function savePost(temporaryPost) {
+  return {
+    type: 'savePost',
+    payload: { temporaryPost },
   };
 }
 
