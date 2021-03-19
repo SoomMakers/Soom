@@ -63,7 +63,7 @@ export function showDoneTasks() {
 export function addPost(description) {
   return {
     type: 'addPost',
-    payload: { description },
+    payload: description,
   };
 }
 

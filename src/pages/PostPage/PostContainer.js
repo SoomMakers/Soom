@@ -34,10 +34,8 @@ export default function PostContainer() {
   const onSubmit = (data) => {
     dispatch(
       savePost({
-        post: {
-          user,
-          post: data,
-        },
+        user,
+        post: data,
       }),
     );
 

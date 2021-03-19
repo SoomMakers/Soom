@@ -25,7 +25,7 @@ export default function CommunityContainer() {
         <option value="oceania">oceania</option>
       </select>
       <div>
-        {posts?.map(({ user: { id, name }, post: { todo } }) => (
+        {posts?.map(({ user: { id, name }, post: { todo }, description }) => (
           <section key={id}>
             <p>{name}</p>
             <ul>
@@ -33,6 +33,7 @@ export default function CommunityContainer() {
                 <li key={todoId}>{taskTitle}</li>
               ))}
             </ul>
+            <p>{description}</p>
           </section>
         ))}
       </div>

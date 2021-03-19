@@ -41,7 +41,7 @@ const reducers = {
   }),
 
   savePost: (state, { payload: { temporaryPost } }) => {
-    temporaryPost.post.post.todo = temporaryPost.post.post.todo.map((taskTitle, index) => ({
+    temporaryPost.post.todo = temporaryPost.post.todo.map((taskTitle, index) => ({
       id: state.id + index,
       taskTitle,
     }));
@@ -117,7 +117,7 @@ const reducers = {
     ...state,
     posts: [...state.posts, {
       ...state.temporaryPost,
-      description: description.description,
+      description,
     }],
   }),
 };
