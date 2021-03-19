@@ -186,28 +186,26 @@ describe('reducer', () => {
 
     it('선택한 완료된 일들을, 임시로 저장한다', () => {
       const state = reducer(initialState, savePost({
+        user: {
+          id: 100,
+          name: 'kim',
+        },
         post: {
-          user: {
-            id: 100,
-            name: 'kim',
-          },
-          post: {
-            todo: [
-              {
-                id: 1000,
-                taskTitle: 'Segregation',
-              },
-              {
-                id: 1001,
-                taskTitle: 'Recycle Plastics',
-              },
-            ],
-          },
+          todo: [
+            {
+              id: 1000,
+              taskTitle: 'Segregation',
+            },
+            {
+              id: 1001,
+              taskTitle: 'Recycle Plastics',
+            },
+          ],
         },
       }));
 
-      expect(state.temporaryPost.post.user.name).toBe('kim');
-      expect(state.temporaryPost.post.post.todo).toHaveLength(2);
+      expect(state.temporaryPost.user.name).toBe('kim');
+      expect(state.temporaryPost.post.todo).toHaveLength(2);
     });
   });
 

@@ -8,6 +8,7 @@ import {
   CommunityPage,
   PostPage,
   PostDescriptionPage,
+  UserPage,
 } from '../pages';
 
 export default function App() {
@@ -21,6 +22,9 @@ export default function App() {
           <li>
             <Link to="/community">Community</Link>
           </li>
+          <li>
+            <Link to="/user">My Page</Link>
+          </li>
         </ul>
       </header>
       <Switch>
@@ -30,6 +34,7 @@ export default function App() {
         <Route exact path="/community" component={CommunityPage} />
         <Route exact path="/community/post" component={PostPage} />
         <Route exact path="/community/post/description" component={PostDescriptionPage} />
+        <Route exact path="/user" component={UserPage} />
       </Switch>
     </>
   );

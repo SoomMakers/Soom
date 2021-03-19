@@ -17,6 +17,7 @@ const africa = {
           },
         ],
       },
+      description: 'It was a hard day, but I feel so good today as I work for the environment.',
     },
     {
       user: {
@@ -35,6 +36,7 @@ const africa = {
           },
         ],
       },
+      description: "I didn't do a lot of good things today, but I have a tomorrow, so I have to work hard.",
     },
     {
       user: {
@@ -53,6 +55,7 @@ const africa = {
           },
         ],
       },
+      description: 'Today was the best. Everything went well.',
     },
     {
       user: {
@@ -71,6 +74,7 @@ const africa = {
           },
         ],
       },
+      description: 'What I do now will make the planet more beautiful in the future',
     },
   ],
 };

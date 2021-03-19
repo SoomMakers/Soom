@@ -17,11 +17,7 @@ export default function PostDescription() {
   }
 
   const onSubmit = (data) => {
-    dispatch(addPost(
-      {
-        description: data,
-      },
-    ));
+    dispatch(addPost(data));
 
     history.push('/community');
   };
