@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Switch, Route, Link } from 'react-router-dom';
 
+import '../css/styles.css';
+
 import {
   TodoPage,
   TodoFindPage,
@@ -14,19 +16,6 @@ import {
 export default function App() {
   return (
     <>
-      <header>
-        <ul>
-          <li>
-            <Link to="/">Todo</Link>
-          </li>
-          <li>
-            <Link to="/community">Community</Link>
-          </li>
-          <li>
-            <Link to="/user">My Page</Link>
-          </li>
-        </ul>
-      </header>
       <Switch>
         <Route exact path="/" component={TodoPage} />
         <Route exact path="/todo" component={TodoPage} />
@@ -36,6 +25,25 @@ export default function App() {
         <Route exact path="/community/post/description" component={PostDescriptionPage} />
         <Route exact path="/user" component={UserPage} />
       </Switch>
+      <footer className="nav">
+        <ul className="nav__list">
+          <li className="nav__btn">
+            <Link to="/" className="nav__link nav__now">
+              <span className="material-icons">list</span>
+            </Link>
+          </li>
+          <li className="nav__btn">
+            <Link to="/community" className="nav__link">
+              <span className="material-icons">subtitles</span>
+            </Link>
+          </li>
+          <li className="nav__btn">
+            <Link to="/user" className="nav__link">
+              <span className="material-icons">account_circle</span>
+            </Link>
+          </li>
+        </ul>
+      </footer>
     </>
   );
 }

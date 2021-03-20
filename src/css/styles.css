@@ -1,0 +1,80 @@
+/* @import "reset.css"; */
+@import "variables.css";
+
+/* Components */
+/* @import "components/head-bar.css"; */
+@import "components/nav-bar.css";
+@import "components/list.css";
+
+/* Screens */
+@import "screens/todo-main.css";
+/* @import "screens/todo-find.css";
+@import "screens/community-feed.css";
+@import "screens/community-todo.css";
+@import "screens/community-description.css";
+@import "screens/myinfo-main.css"; */
+
+/* @font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(path/to/MaterialIcons-Regular.eot);
+  src:
+    local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(path/to/MaterialIcons-Regular.woff2) format('woff2'),
+    url(path/to/MaterialIcons-Regular.woff) format('woff'),
+    url(path/to/MaterialIcons-Regular.ttf) format('truetype');
+} */
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 30px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+ 
+  -webkit-font-smoothing: antialiased;
+ 
+  text-rendering: optimizeLegibility;
+ 
+  -moz-osx-font-smoothing: grayscale;
+ 
+  font-feature-settings: 'liga';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  /* padding: 20px;  */
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    width: 320px;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  body {
+    width: 414px;
+  }
+}
+
+@media screen and (max-height: 568px) {
+  body {
+    height: 568px;
+  }
+}

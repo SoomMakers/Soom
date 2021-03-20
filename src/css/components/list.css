@@ -1,0 +1,59 @@
+.list {
+  margin-top: 5vh;
+  padding: 0 8%;
+ }
+ 
+.list-checkset {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+ 
+.list-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8% 8% 8% 0;
+  padding-bottom: 3%;
+  border-bottom: var(--main-border);
+}
+ 
+.list-name {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+  width: 60%;
+}
+
+.list-check {
+  margin-right: 10%;
+  width: 18px;
+  height: 18px;
+  font-family: 'Nanum Gothic Coding', monospace;
+  cursor: pointer,
+}
+ 
+.list-delete {
+  width: 18px;
+  height: 18px;
+  border: none;
+  background-color: white;
+  font-size: 18px;
+  padding: 0;
+  padding-bottom: 1%;
+  color: #99e6ff;
+}
+
+.list-delete-container {
+  display: inline-block;
+  position: relative;
+}
+
+.delete-icon {
+  position: absolute;
+  left: 0;
+}
+
+.fa-times {
+  color: #99e6ff;
+  font-weight: lighter;
+}

@@ -36,7 +36,7 @@ describe('List', () => {
     it('삭제버튼을 누르면 handleClickDelete가 실행된다.', () => {
       const { getAllByText } = renderList(tasks);
 
-      const buttons = getAllByText('Delete');
+      const buttons = getAllByText('clear');
 
       fireEvent.click(buttons[0]);
 

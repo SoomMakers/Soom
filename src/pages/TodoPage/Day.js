@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../../css/styles.css';
+
 export default function Day() {
   function getDay() {
     const weekday = [
@@ -30,5 +32,10 @@ export default function Day() {
     year, month, date, day,
   } = getDay();
 
-  return <div>{`${year}.${month}.${date}.${day}`}</div>;
+  return (
+    <div className="todo-main__header">
+      <h2 className="todo-main__date">{`${year}.${month}.${date}`}</h2>
+      <h1 className="todo-main__day">{`${day}`}</h1>
+    </div>
+  );
 }
