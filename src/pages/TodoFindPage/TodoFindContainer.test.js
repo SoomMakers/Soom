@@ -72,9 +72,7 @@ describe('TodoFindContainer', () => {
     fireEvent.click(screen.getByLabelText("unplug devices when you don't use them"));
 
     await act(async () => {
-      fireEvent.submit(screen.getByRole('button', {
-        name: /ADD/i,
-      }));
+      fireEvent.submit(screen.getByText('add'));
     });
 
     expect(dispatch).toBeCalled();
