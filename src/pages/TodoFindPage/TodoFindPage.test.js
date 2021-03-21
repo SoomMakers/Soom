@@ -39,7 +39,6 @@ describe('TodoFindPage', () => {
   it('renders TodoFindPage', () => {
     renderTodoFindPage();
 
-    expect(screen.getByText('Find')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /CLOSE/i })).toBeInTheDocument();
     expect(screen.getByText(/Choose What You Want To Do/i)).toBeInTheDocument();
   });

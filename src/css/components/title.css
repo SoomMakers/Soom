@@ -1,0 +1,11 @@
+.title {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Plantagenet Cherokee';
+    color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1.5px solid #ddf1f6;
+    padding-top: 150px;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }

@@ -1,0 +1,81 @@
+.no-list {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 70px;
+  color: var(--blue);
+  letter-spacing: 1.5px;
+}
+
+.list {
+  margin-top: 20px;
+  padding: 0 8%;
+ }
+
+ .list-container {
+  overflow: scroll;
+  height: 47vh;
+}
+
+.list-container::-webkit-scrollbar {
+  background-color: transparent;
+}
+ 
+.list-checkset {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+ 
+.list-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2% 8% 2%;
+  padding-bottom: 3%;
+  border-bottom: var(--main-border);
+}
+ 
+.list-name {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+  width: 90%;
+}
+
+.list-check {
+  margin-right: 5%;
+  width: 18px;
+  height: 18px;
+  font-family: 'Nanum Gothic Coding', monospace;
+  cursor: pointer,
+}
+ 
+.list-delete {
+  width: 18px;
+  height: 18px;
+  border: none;
+  background-color: white;
+  font-size: 18px;
+  padding: 0;
+  padding-bottom: 1%;
+  color: #99e6ff;
+}
+
+.list-delete:focus {
+  outline: none;
+}
+
+.list-delete-container {
+  display: inline-block;
+  position: relative;
+}
+
+.delete-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.fa-times {
+  color: #99e6ff;
+  font-weight: lighter;
+}

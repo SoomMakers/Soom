@@ -38,17 +38,17 @@ describe('TodoContainer', () => {
   });
 
   it('handleClickComplete를 dispatch 해준다', () => {
-    const { queryByText } = renderTodoContainer();
+    const { queryByPlaceholderText } = renderTodoContainer();
 
-    fireEvent.click(queryByText('Complete'));
+    fireEvent.click(queryByPlaceholderText('complete'));
 
     expect(dispatch).toBeCalled();
   });
 
   it('handleClickDelete를 dispatch 해준다', () => {
-    const { queryByText } = renderTodoContainer();
+    const { queryByPlaceholderText } = renderTodoContainer();
 
-    fireEvent.click(queryByText('Delete'));
+    fireEvent.click(queryByPlaceholderText('complete'));
 
     expect(dispatch).toBeCalled();
   });

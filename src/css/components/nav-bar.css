@@ -1,0 +1,42 @@
+.nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #fafafa;
+    padding: 3% 15%;
+    box-sizing: border-box;
+    box-shadow: 0px -4px 5px -4px rgba(121, 121, 121, 0.3);
+  }
+  
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+  }
+  
+  .nav__link {
+    position: relative;
+    color: #b1b5b8;
+  }
+  
+  .nav__now {
+    color: var(--blue);
+  }
+  
+  .regions {
+    border: none;
+    background-color:#f9f9fa;
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'roboto';
+    font-size: 0.9em;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .regions:focus {
+    outline: none;
+  }
+  
