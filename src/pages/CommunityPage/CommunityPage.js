@@ -7,8 +7,10 @@ import CommunityContainer from './CommunityContainer';
 export default function CommunityPage() {
   return (
     <div>
-      <h1>Community</h1>
-      <Link to="/community/post">POST</Link>
+      <header className="head__link-bar">
+        <p />
+        <Link to="/community/post" className="head__link">POST</Link>
+      </header>
       <CommunityContainer />
     </div>
   );

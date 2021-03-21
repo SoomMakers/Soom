@@ -1,0 +1,108 @@
+.user-info-page {
+    height: 90%;
+    padding-bottom: 70px;
+  }
+  
+  .user-info-container {
+    padding-top: 5vh;
+    margin-bottom: 40px;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    padding: 5vh 0px;
+  }
+  
+  .user-info__profile {
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+  }
+  
+  .user-info__name {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 2vh 0;
+  }
+  .user-info__days {
+    font-size: 20px;
+    color: var(--blue);
+  }
+  
+  .user-info__description-container {
+    width: 100%;
+    padding: 3vh 20px 0 20px;
+  }
+  
+  .user-info__description-container p:first-child {
+    border-bottom: var(--main-border);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    color: gray;
+  }
+
+  .user-progress {
+    overflow: scroll;
+    margin-left: 5px;
+  }
+
+  .user-progress::-webkit-scrollbar {
+    background-color: transparent;
+  }
+  
+  .user-progress-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 2vh 10px;
+  }
+  
+  .month {
+    text-align: center;
+  }
+  
+  .month p {
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+  
+  .week {
+    display: flex;
+  }
+  
+  .day {
+    width: 10px;
+    height: 10px;
+    background-color: #F6F6F6;
+    /* border: 1px solid #d5d5d5; */
+    border-radius: 2px;
+    margin: 1px;
+  }
+  
+  .day-none {
+    background-color: white;
+    border: 1px solid white;
+  }
+
+  .day-color-one {
+    background-color: #49C2E9;
+    opacity: 0.2;
+  }
+
+  .day-color-two {
+    background-color: #49C2E9;
+    opacity: 0.4;
+  }
+
+  .day-color-three {
+    background-color: #49C2E9;
+    opacity: 0.6;
+  }
+
+  .day-color-four {
+    background-color: #49C2E9;
+    opacity: 0.8;
+  }
+

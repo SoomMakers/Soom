@@ -11,7 +11,7 @@ export default function TodoFind({
     <div>
       <header className="head__link-bar">
         <p />
-        <button type="button" onClick={handleClickClose} className="head__link">
+        <button type="button" onClick={handleClickClose} className="head__link head__link-close">
           <p>CLOSE</p>
         </button>
       </header>
