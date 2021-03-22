@@ -10,6 +10,7 @@ import {
   CommunityPage,
   PostPage,
   PostDescriptionPage,
+  PostPicturePage,
   UserPage,
 } from '../pages';
 
@@ -23,6 +24,7 @@ export default function App() {
         <Route exact path="/community" component={CommunityPage} />
         <Route exact path="/community/post" component={PostPage} />
         <Route exact path="/community/post/description" component={PostDescriptionPage} />
+        <Route exact path="/community/post/picture" component={PostPicturePage} />
         <Route exact path="/user" component={UserPage} />
       </Switch>
       <footer className="nav">

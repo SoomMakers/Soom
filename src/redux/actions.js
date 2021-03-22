@@ -1,6 +1,7 @@
 import {
   fetchPost,
   fetchMission,
+  postPicture,
 } from '../services/api';
 
 export function setTaskTitle(taskTitle) {
@@ -60,17 +61,24 @@ export function showDoneTasks() {
   return { type: 'showDoneTasks' };
 }
 
-export function addPost(description) {
-  return {
-    type: 'addPost',
-    payload: description,
-  };
-}
-
 export function savePost(temporaryPost) {
   return {
     type: 'savePost',
     payload: { temporaryPost },
+  };
+}
+
+export function savePicture(imageSource) {
+  return {
+    type: 'savePicture',
+    payload: { imageSource },
+  };
+}
+
+export function addPost(description) {
+  return {
+    type: 'addPost',
+    payload: description,
   };
 }
 
@@ -88,5 +96,13 @@ export function loadMissions() {
   return async (dispatch) => {
     const missions = await fetchMission();
     dispatch(setMissions(missions));
+  };
+}
+
+export function sendPicture(ImageSource) {
+  return async (dispatch) => {
+    const imageSource = await postPicture({ ImageSource });
+
+    dispatch(savePicture(imageSource));
   };
 }
