@@ -40,18 +40,6 @@ const reducers = {
     continent,
   }),
 
-  savePost: (state, { payload: { temporaryPost } }) => {
-    temporaryPost.post.todo = temporaryPost.post.todo.map((taskTitle, index) => ({
-      id: state.id + index,
-      taskTitle,
-    }));
-
-    return ({
-      ...state,
-      temporaryPost,
-    });
-  },
-
   addTodo: (state) => {
     if (state.taskTitle) {
       return {
@@ -111,6 +99,26 @@ const reducers = {
   showDoneTasks: (state) => ({
     ...state,
     doneTasks: state.tasks.filter((task) => task.done === true),
+  }),
+
+  savePost: (state, { payload: { temporaryPost } }) => {
+    temporaryPost.post.todo = temporaryPost.post.todo.map((taskTitle, index) => ({
+      id: state.id + index,
+      taskTitle,
+    }));
+
+    return ({
+      ...state,
+      temporaryPost,
+    });
+  },
+
+  savePicture: (state, { payload: { imageSource } }) => ({
+    ...state,
+    temporaryPost: {
+      ...state.temporaryPost,
+      src: imageSource,
+    },
   }),
 
   addPost: (state, { payload: { description } }) => ({

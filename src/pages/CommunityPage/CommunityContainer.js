@@ -28,7 +28,9 @@ export default function CommunityContainer() {
       </header>
       <main className="community-feed-container">
 
-        {posts?.map(({ user: { id, name }, post: { todo }, description }) => (
+        {posts?.map(({
+          user: { id, name }, post: { todo }, description, src,
+        }) => (
           <section key={id}>
             <div className="community-feed">
               <div className="community-feed__profile">
@@ -51,7 +53,7 @@ export default function CommunityContainer() {
               </ul>
               <div className="community-feed__photo-container">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShlhZpRB8bSkRJh_wJlQ7BnON9rkz1MnAF6Q&usqp=CAU"
+                  src={src}
                   alt=""
                 />
               </div>

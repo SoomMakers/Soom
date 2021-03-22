@@ -19,14 +19,6 @@ export default function PostContainer() {
 
   const { handleSubmit, register } = useForm();
 
-  /**
-   * 1. next 버튼으로 교체해서 Description Page로 이동하여라 App 라우팅설정
-   * 2. next를 클릭 시에, 현재 form data를 store에 우선 저장을 실시한다.
-   * 3. reducer에서 setPost -> 수정을 해야된다 선 데이터 저장.
-   *
-   *
-   */
-
   function handleClickClose() {
     history.push('/community');
   }
@@ -39,7 +31,7 @@ export default function PostContainer() {
       }),
     );
 
-    history.push('/community/post/description');
+    history.push('/community/post/picture');
   };
 
   useEffect(() => {
