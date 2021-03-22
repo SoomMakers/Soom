@@ -39,8 +39,12 @@ export default function TodoFind({
         </ul>
         <div id="add-todo-find">
           <div className="todo-find__list-add-container">
-            <input type="submit" value="" className="todo-find__list-add" />
-            <span className="material-icons add-icon">add</span>
+            <button
+              type="submit"
+              className="todo-find__list-add"
+            >
+              <span className="material-icons add-icon">add</span>
+            </button>
           </div>
         </div>
       </form>
