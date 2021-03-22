@@ -24,28 +24,29 @@ export default function PostDescription() {
 
   return (
     <div>
-      <button type="button" onClick={handleClickBack}>
-        BACK
-      </button>
-
-      <h2>Write What You Want to Post</h2>
-
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="post-description">
-          description
-        </label>
-        <textarea
-          placeholder="Write a brief description"
-          id="post-description"
-          name="description"
-          cols="30"
-          rows="10"
-          ref={register()}
-        />
-
-        <button type="submit">
-          POST
-        </button>
+        <div className="head__link-bar">
+          <button className="head__link" type="button" onClick={handleClickBack}>
+            BACK
+          </button>
+          <button className="head__link" type="submit">
+            POST
+          </button>
+        </div>
+        <h2 className="community-description__title title">Write What You Want to Post</h2>
+        <div className="community-description__container">
+          <label htmlFor="post-description">
+            description
+          </label>
+          <textarea
+            placeholder="Write a brief description"
+            id="post-description"
+            name="description"
+            cols="30"
+            rows="10"
+            ref={register()}
+          />
+        </div>
       </form>
     </div>
   );

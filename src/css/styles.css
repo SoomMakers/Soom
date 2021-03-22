@@ -11,8 +11,7 @@
 @import "screens/todo-main.css";
 @import "screens/todo-find.css";
 @import "screens/community-feed.css";
-/* @import "screens/community-todo.css"; */
-/* @import "screens/community-description.css"; */
+@import "screens/community-description.css";
 @import "screens/myinfo-main.css";
 
 /* @font-face {
@@ -29,7 +28,7 @@
 } */
 
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   font-size: 30px;
@@ -40,14 +39,14 @@
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
- 
+
   -webkit-font-smoothing: antialiased;
- 
+
   text-rendering: optimizeLegibility;
- 
+
   -moz-osx-font-smoothing: grayscale;
- 
-  font-feature-settings: 'liga';
+
+  font-feature-settings: "liga";
 }
 
 * {
