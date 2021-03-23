@@ -31,7 +31,7 @@ export default function PostContainer() {
       }),
     );
 
-    history.push('/community/post/picture');
+    history.push('/community/post/description');
   };
 
   useEffect(() => {
@@ -44,28 +44,34 @@ export default function PostContainer() {
 
   return (
     <div>
-      <button type="button" onClick={handleClickClose}>
-        BACK
-      </button>
-
       <form onSubmit={handleSubmit(onSubmit)}>
-        {doneTasks?.map(({ id, title }) => (
-          <div key={id}>
-            <input
-              type="checkbox"
-              id={`${id}-task`}
-              name="todo"
-              value={title}
-              ref={register()}
-            />
-
-            <label htmlFor={`${id}-task`}>{title}</label>
-          </div>
-        ))}
-
-        <button type="submit">
-          NEXT
-        </button>
+        <div className="head__link-bar">
+          <button type="button" onClick={handleClickClose} className="head__link">
+            BACK
+          </button>
+          <button type="submit" className="head__link">
+            NEXT
+          </button>
+        </div>
+        <div className="list-container">
+          <ul className="list community-todo__list">
+            {doneTasks?.map(({ id, title }) => (
+              <li key={id} className="list-todo community-todo__list-todo">
+                <div className="list-checkset community-todo__list-checkset">
+                  <input
+                    type="checkbox"
+                    id={`${id}-task`}
+                    name="todo"
+                    value={title}
+                    ref={register()}
+                    className="list-check community-todo__list-check"
+                  />
+                  <label htmlFor={`${id}-task`} className="list-name community-todo__list-name">{title}</label>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </form>
     </div>
   );
