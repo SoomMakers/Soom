@@ -31,7 +31,7 @@ export default function PostContainer() {
       }),
     );
 
-    history.push('/community/post/description');
+    history.push('/community/post/picture');
   };
 
   useEffect(() => {

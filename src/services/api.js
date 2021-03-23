@@ -4,6 +4,7 @@ import continents from '../fixtures/continents';
 
 import missions from '../fixtures/missions';
 
+// 로컬 서버 실패
 const api = axios.create({
   baseURL: 'http://localhost:8008',
 });
