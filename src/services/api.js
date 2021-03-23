@@ -1,6 +1,12 @@
+import axios from 'axios';
+
 import continents from '../fixtures/continents';
 
 import missions from '../fixtures/missions';
+
+const api = axios.create({
+  baseURL: 'http://localhost:8008',
+});
 
 export function fetchPost({ continent }) {
   return continents[continent].posts;
@@ -11,14 +17,7 @@ export function fetchMission() {
 }
 
 export async function postPicture({ ImageSource }) {
-  const API_ENDPOINT = 'https://fierce-beyond-91643.herokuapp.com';
-
-  const response = await fetch(`${API_ENDPOINT}/upload`, {
-    method: 'post',
-    body: ImageSource,
-  });
-
-  const { data } = await response.json();
+  const { data: { data } } = await api.post('/upload', ImageSource);
 
   return data;
 }
