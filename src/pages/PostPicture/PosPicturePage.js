@@ -5,7 +5,7 @@ import PostPictureContainer from './PostPictureContainer';
 export default function PostPicturePage() {
   return (
     <div>
-      <h2>Upload Picture</h2>
+      <h2 className="community-todo__title title">Upload Picture</h2>
       <PostPictureContainer />
     </div>
   );

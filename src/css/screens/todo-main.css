@@ -39,7 +39,7 @@
 
 #goto-todo-find {
   position: absolute;
-  bottom: 90px;
+  bottom: 86px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -60,7 +60,7 @@
 
 .search-icon {
   position: absolute;
-  left: 23%;
+  left: 22%;
   top: 19%;
   color: white;
 }

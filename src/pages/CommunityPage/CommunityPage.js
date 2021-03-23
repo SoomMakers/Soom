@@ -9,7 +9,7 @@ export default function CommunityPage() {
     <div>
       <header className="head__link-bar">
         <p />
-        <Link to="/community/post" className="head__link">POST</Link>
+        <Link to="/community/post" className="head__link head__link-community">POST</Link>
       </header>
       <CommunityContainer />
     </div>
