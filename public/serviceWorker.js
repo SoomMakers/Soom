@@ -19,12 +19,12 @@ async function newtorkFirst(req) {
   }
 }
 
-window.addEventListener('install', async (event) => {
+this.addEventListener('install', async (event) => {
   const cache = await caches.open('static-cache');
   cache.addAll(staticAssets);
 });
 
-window.addEventListener('fetch', (event) => {
+this.addEventListener('fetch', (event) => {
   const req = event.request;
   const url = new URL(req.url);
 
