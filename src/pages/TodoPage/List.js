@@ -10,7 +10,7 @@ export default function List({ tasks, onClickDelete, onClickComplete }) {
   return (
     <div className="list-container">
       <ul className="list todo-main__list">
-        {tasks.map(({ id, title }) => (
+        {tasks.map(({ id, title, done }) => (
           <li key={id} className="list-todo todo-main__list-todo">
             <div className="list-checkset todo-main__list-checkset">
               <input
@@ -19,7 +19,19 @@ export default function List({ tasks, onClickDelete, onClickComplete }) {
                 onClick={() => onClickComplete(id)}
                 placeholder="complete"
               />
-              <p className="list-name todo-main__list-name">{title}</p>
+
+              {done
+                ? (
+                  <p className="list-name todo-main__list-name" style={{ textDecoration: 'line-through' }}>
+                    {title}
+                  </p>
+                )
+                : (
+                  <p className="list-name todo-main__list-name">
+                    {title}
+                  </p>
+                )}
+
             </div>
             <div className="list-delete-container">
               <button
