@@ -10,6 +10,11 @@ import store from './redux/store';
 
 import App from './components/App';
 
+// Register service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('serviceWorker.js');
+}
+
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
