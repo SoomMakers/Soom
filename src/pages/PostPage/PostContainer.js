@@ -26,7 +26,11 @@ export default function PostContainer() {
   const onSubmit = (data) => {
     dispatch(
       savePost({
-        user,
+        user: {
+          ...user,
+          day: '11',
+          profileImage: 'https://avatars.githubusercontent.com/u/54464320?s=460&u=069fe7a8dfcf4420fae0261f02917c5ac4ae7827&v=4',
+        },
         post: data,
       }),
     );
