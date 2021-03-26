@@ -71,6 +71,11 @@
     background-color: #fafafa;
   }
   
+  .community-feed__photo-container img {
+    width: 80%;
+    height: 80%;
+  }
+
   .community-feed__description {
     margin-bottom: 10px;
     font-size: 15px;
