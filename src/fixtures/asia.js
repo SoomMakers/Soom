@@ -4,6 +4,8 @@ const asia = {
       user: {
         id: 100,
         name: 'kim',
+        profileImage: 'https://randomuser.me/api/portraits/women/90.jpg',
+        day: 13,
       },
       post: {
         todo: [
@@ -15,12 +17,13 @@ const asia = {
       },
       description: 'I saved Earth Today',
       src: 'https://images.unsplash.com/photo-1602028805248-fe756e6fd924?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8dHJhc2glMjBjYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
-      // 'https://images.unsplash.com/photo-1582408921715-18e7806365c1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTJ8fHdhc3RlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
     },
     {
       user: {
         id: 101,
         name: 'park',
+        profileImage: 'https://randomuser.me/api/portraits/men/90.jpg',
+        day: 22,
       },
       post: {
         todo: [
@@ -41,6 +44,8 @@ const asia = {
       user: {
         id: 102,
         name: 'shin',
+        profileImage: 'https://randomuser.me/api/portraits/men/26.jpg',
+        day: 54,
       },
       post: {
         todo: [
@@ -57,6 +62,8 @@ const asia = {
       user: {
         id: 103,
         name: 'choi',
+        profileImage: 'https://randomuser.me/api/portraits/women/2.jpg',
+        day: 11,
       },
       post: {
         todo: [
@@ -73,6 +80,8 @@ const asia = {
       user: {
         id: 104,
         name: 'han',
+        profileImage: 'https://randomuser.me/api/portraits/women/27.jpg',
+        day: 9,
       },
       post: {
         todo: [

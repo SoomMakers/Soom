@@ -4,6 +4,8 @@ const africa = {
       user: {
         id: 100,
         name: 'bob',
+        profileImage: 'https://randomuser.me/api/portraits/men/16.jpg',
+        day: 53,
       },
       post: {
         todo: [
@@ -24,6 +26,8 @@ const africa = {
       user: {
         id: 101,
         name: 'obameang',
+        profileImage: 'https://randomuser.me/api/portraits/men/10.jpg',
+        day: 3,
       },
       post: {
         todo: [
@@ -44,6 +48,8 @@ const africa = {
       user: {
         id: 102,
         name: 'Dudunga',
+        profileImage: 'https://randomuser.me/api/portraits/men/34.jpg',
+        day: 73,
       },
       post: {
         todo: [
@@ -64,6 +70,8 @@ const africa = {
       user: {
         id: 103,
         name: 'Gabong',
+        profileImage: 'https://randomuser.me/api/portraits/men/6.jpg',
+        day: 10,
       },
       post: {
         todo: [
