@@ -29,25 +29,29 @@ export default function CommunityContainer() {
       <main className="community-feed-container">
 
         {posts?.map(({
-          user: { id, name }, post: { todo }, description, src,
+          user: {
+            id, name, profileImage, day,
+          }, post: { todo }, description, src,
         }) => (
           <section key={id}>
             <div className="community-feed">
               <div className="community-feed__profile">
                 <img
-                  src="https://avatars.githubusercontent.com/u/54464320?s=460&u=069fe7a8dfcf4420fae0261f02917c5ac4ae7827&v=4"
+                  src={profileImage}
                   alt=""
                   className="community-feed__profile-photo"
                 />
                 <div className="community-feed__profile-user">
                   <p className="community-feed__user">{name}</p>
-                  <p className="community-feed__day">DAY 11</p>
+                  <p className="community-feed__day">
+                    {`DAY ${day}`}
+                  </p>
                 </div>
               </div>
               <ul className="community-feed__list">
                 {todo.map(({ id: todoId, taskTitle }) => (
                   <div key={todoId} className="community-feed__today">
-                    <li className="community-feed__todo">{taskTitle}</li>
+                    <li className="community-feed__todo">{`- ${taskTitle}`}</li>
                   </div>
                 ))}
               </ul>

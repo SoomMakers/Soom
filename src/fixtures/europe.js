@@ -3,7 +3,9 @@ const europe = {
     {
       user: {
         id: 101,
-        name: 'harry',
+        name: 'susan',
+        profileImage: 'https://randomuser.me/api/portraits/women/79.jpg',
+        day: 73,
       },
       post: {
         todo: [
@@ -20,6 +22,8 @@ const europe = {
       user: {
         id: 102,
         name: 'ali',
+        profileImage: 'https://randomuser.me/api/portraits/women/72.jpg',
+        day: 73,
       },
       post: {
         todo: [
@@ -37,6 +41,8 @@ const europe = {
       user: {
         id: 103,
         name: 'winks',
+        profileImage: 'https://randomuser.me/api/portraits/women/84.jpg',
+        day: 73,
       },
       post: {
         todo: [

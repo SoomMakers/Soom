@@ -4,6 +4,8 @@ const oceania = {
       user: {
         id: 100,
         name: 'hugh jackman',
+        profileImage: 'https://randomuser.me/api/portraits/women/45.jpg',
+        day: 54,
       },
       post: {
         todo: [
@@ -24,6 +26,8 @@ const oceania = {
       user: {
         id: 101,
         name: 'chris Hemsworth',
+        profileImage: 'https://randomuser.me/api/portraits/women/17.jpg',
+        day: 54,
       },
       post: {
         todo: [
@@ -41,6 +45,8 @@ const oceania = {
       user: {
         id: 102,
         name: 'keith urban',
+        profileImage: 'https://randomuser.me/api/portraits/women/71.jpg',
+        day: 54,
       },
       post: {
         todo: [

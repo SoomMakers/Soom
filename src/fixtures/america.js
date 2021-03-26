@@ -4,6 +4,8 @@ const america = {
       user: {
         id: 100,
         name: 'trump',
+        profileImage: 'https://randomuser.me/api/portraits/men/11.jpg',
+        day: 86,
       },
       post: {
         todo: [
@@ -24,6 +26,8 @@ const america = {
       user: {
         id: 101,
         name: 'Jordan',
+        profileImage: 'https://randomuser.me/api/portraits/women/57.jpg',
+        day: 1,
       },
       post: {
         todo: [
@@ -44,6 +48,8 @@ const america = {
       user: {
         id: 102,
         name: 'jobs',
+        profileImage: 'https://randomuser.me/api/portraits/women/9.jpg',
+        day: 75,
       },
       post: {
         todo: [
@@ -64,6 +70,8 @@ const america = {
       user: {
         id: 103,
         name: 'bill',
+        profileImage: 'https://randomuser.me/api/portraits/men/91.jpg',
+        day: 32,
       },
       post: {
         todo: [
