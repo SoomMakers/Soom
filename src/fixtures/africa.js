@@ -38,7 +38,7 @@ const africa = {
         ],
       },
       description: "I didn't do a lot of good things today, but I have a tomorrow, so I have to work hard.",
-      src: 'https://images.unsplash.com/photo-1592869677016-48cafa0fa6f1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE2MzgzMDE2&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300',
+      src: 'https://images.unsplash.com/photo-1489693755295-4a1efc9e7f72?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fHR1bWJscnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
     },
     {
       user: {
@@ -58,7 +58,7 @@ const africa = {
         ],
       },
       description: 'Today was the best. Everything went well.',
-      src: 'https://images.unsplash.com/photo-1592869677016-48cafa0fa6f1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE2MzgzMDE2&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300',
+      src: 'https://images.unsplash.com/photo-1530912585210-7916cd026e59?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8dmVnZXRhcmlhbiUyMGZvb2R8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
     },
     {
       user: {
@@ -78,7 +78,7 @@ const africa = {
         ],
       },
       description: 'What I do now will make the planet more beautiful in the future',
-      src: 'https://images.unsplash.com/photo-1592869677016-48cafa0fa6f1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218fHx8fHx8fHwxNjE2MzgzMDE2&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=300',
+      src: 'https://images.unsplash.com/photo-1593113630400-ea4288922497?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZG9uYXRpb24lMjBjbG90aHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60',
     },
   ],
 };
