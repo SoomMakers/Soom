@@ -40,7 +40,11 @@ export default function TodoContainer() {
   return (
     <div>
       <Day />
-      <Input value={taskTitle} onChange={handleChange} onClick={handleClick} />
+      <Input
+        value={taskTitle}
+        onChange={handleChange}
+        onClick={handleClick}
+      />
       <List
         tasks={tasks}
         onClickDelete={handleClickDelete}

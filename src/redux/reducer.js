@@ -48,7 +48,11 @@ const reducers = {
         taskTitle: '',
         tasks: [
           ...state.tasks,
-          { id: state.id, title: state.taskTitle, done: false },
+          {
+            id: state.id,
+            title: state.taskTitle,
+            done: false,
+          },
         ],
       };
     }

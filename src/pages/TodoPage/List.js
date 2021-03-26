@@ -13,23 +13,33 @@ export default function List({ tasks, onClickDelete, onClickComplete }) {
         {tasks.map(({ id, title, done }) => (
           <li key={id} className="list-todo todo-main__list-todo">
             <div className="list-checkset todo-main__list-checkset">
-              <input
-                className="list-check todo-main__list-check"
-                type="checkbox"
-                onClick={() => onClickComplete(id)}
-                placeholder="complete"
-              />
-
               {done
                 ? (
-                  <p className="list-name todo-main__list-name" style={{ textDecoration: 'line-through' }}>
-                    {title}
-                  </p>
+                  <>
+                    <input
+                      className="list-check todo-main__list-check"
+                      type="checkbox"
+                      checked
+                      onClick={() => onClickComplete(id)}
+                      placeholder="complete"
+                    />
+                    <p className="list-name todo-main__list-name" style={{ textDecoration: 'line-through' }}>
+                      {title}
+                    </p>
+                  </>
                 )
                 : (
-                  <p className="list-name todo-main__list-name">
-                    {title}
-                  </p>
+                  <>
+                    <input
+                      className="list-check todo-main__list-check"
+                      type="checkbox"
+                      onClick={() => onClickComplete(id)}
+                      placeholder="complete"
+                    />
+                    <p className="list-name todo-main__list-name">
+                      {title}
+                    </p>
+                  </>
                 )}
 
             </div>
