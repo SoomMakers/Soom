@@ -19,21 +19,21 @@ export default function TodoFind({
       <form onSubmit={handleSubmit(onSubmit)}>
         <ul className="list">
           {missions?.map(({ id, title }) => (
-            <li key={id} className="list-todo">
-              <div className="todo-find__list-checkset">
-                <span className="material-icons todo-find__icon">face</span>
+            <li key={id} className="list-todo todo-find__list-todo">
+              <div className="list-checkset todo-find__list-checkset">
+                <input
+                  type="checkbox"
+                  id={`${id}-mission`}
+                  className="todo-find__list-check"
+                  name="tasks"
+                  value={title}
+                  ref={register}
+                />
                 <label htmlFor={`${id}-mission`} className="list-name">
                   {title}
                 </label>
+
               </div>
-              <input
-                type="checkbox"
-                id={`${id}-mission`}
-                className="todo-find__list-check"
-                name="tasks"
-                value={title}
-                ref={register}
-              />
             </li>
           ))}
         </ul>
