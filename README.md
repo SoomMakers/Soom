@@ -4,7 +4,7 @@
 
 # Soom
 
-**Check out link now!👇** 
+**Check out link now!👇** <br />
 https://pedantic-darwin-200b48.netlify.app
 
 ----
@@ -34,5 +34,5 @@ open [http://localhost:3000](http://localhost:3000/) to view it in thre browser.
 npm test
 ```
 -------
-For more details, please check the following notion link.
+For more details, please check the following notion link.<br />
 https://www.notion.so/submission-form-e0812ac86b544f67875b24ea3afc0d11
