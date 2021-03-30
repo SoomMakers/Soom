@@ -23,7 +23,7 @@ export default function List({ tasks, onClickDelete, onClickComplete }) {
                       onClick={() => onClickComplete(id)}
                       placeholder="complete"
                     />
-                    <p className="list-name todo-main__list-name" style={{ textDecoration: 'line-through' }}>
+                    <p className="list-name todo-main__list-name" style={{ textDecoration: 'line-through', color: 'gray' }}>
                       {title}
                     </p>
                   </>
