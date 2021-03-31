@@ -32,7 +32,7 @@ npm install
 ```bash
 npm start
 ```
-open [http://localhost:3000](http://localhost:3000/) to view it in thre browser.
+open [http://localhost:3000](http://localhost:3000/) to view it in the browser.
 
 ----
 
